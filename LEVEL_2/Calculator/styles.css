@@ -9,7 +9,8 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: white;
+    height: 100vh;
+    background-image: linear-gradient(rgb(196, 172, 39), rgb(230, 200, 200));
 }
 
 .calculator {
@@ -46,33 +47,25 @@ button:hover {
     border-bottom-right-radius: 30px;
 }
 
-.displayOutput {
-    grid-column: 1 / -1;
-}
 
-#dotBtn {
+.dotBtn {
     border-bottom-left-radius: 30px;
 }
 
 
 .displayOutput {
+    grid-column: 1 / -1;
     color: #FFFFFF;
     position: relative;
     top: -60px;
     padding-right: 20px;
 }
 
-.calculation {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 30px;
-}
-
 #result {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    /*display: flex;
+    justify-content: flex-end;*/
+    text-align: right;
     font-weight: 200;
     font-size: 60px;
     background-color: #000000;
@@ -82,8 +75,9 @@ button:hover {
 
 #input {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
+    /*display: flex;
+    justify-content: flex-end;*/
+    text-align: right;
     font-weight: 200;
     font-size: 60px;
     background-color: #000000;
