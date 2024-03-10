@@ -37,21 +37,23 @@ button {
     font-size: 30px
 }
 
+button:hover {
+    background-color:  #525050;
+}
+
 #btn-2 {
     grid-column: span 2;
+    border-bottom-right-radius: 30px;
 }
 
 .displayOutput {
     grid-column: 1 / -1;
 }
 
-.rounded-btn {
+#dotBtn {
     border-bottom-left-radius: 30px;
 }
 
-.rounded-btn1 {
-    border-bottom-right-radius: 30px;
-}
 
 .displayOutput {
     color: #FFFFFF;
@@ -67,10 +69,28 @@ button {
     font-size: 30px;
 }
 
-.result {
+#result {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     font-weight: 200;
     font-size: 60px;
+    background-color: #000000;
+    border: none;
+    color: white;
+}
+
+#input {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 200;
+    font-size: 60px;
+    background-color: #000000;
+    border: none;
+    color: white;
+}
+
+.equalSignBtn {
+    color: white;
 }
