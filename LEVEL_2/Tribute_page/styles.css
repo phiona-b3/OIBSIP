@@ -19,21 +19,17 @@ body {
     grid-template-columns: 2fr 1fr;
     color: #fff;
     grid-column: 1 / 3;
+    z-index: -1;
 }
 
-#tribute-body {
-    width: 100vw;
-    height: 100vh;
-}
-
-img {
+#profile-image {
     border-radius: 50%;
     height: 298px;
     width: 290px;
     margin-top: -6px;
 }
 
-.img-container {
+.img-container { 
     width: 310px;
     height: 310px;
     border-radius: 50%;
@@ -85,4 +81,78 @@ img {
 
 .profile {
     margin-left: 90px;
+}
+
+#profile-flower {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: rotate(36deg);
+    left: 60px;
+}
+
+#profile-flower2 {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: rotate(60deg);
+    top: 180px;
+    left: 160px;
+}
+
+.tribute-body {
+    margin-top: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.body-description {
+    margin-left: 30px;
+    line-height: 24px;
+    font-size: 24px;
+}
+
+.body-description > p::first-letter {
+    font-size: 48px;
+}
+
+.body-achievement {
+    margin-right: 30px;
+    line-height: 24px;
+    font-size: 24px;
+}
+
+.body-achievement > h3 {
+    text-decoration: underline;
+}
+
+.tribute-footer {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+#body-quote {
+    font-style: italic;
+}
+
+.source {
+    margin-top: 40px;
+    text-align: right;
+    margin-right: 60px;
+    opacity: 0.3;
+}
+
+.blank {
+    width: 100vw;
+    height: 100px;
+    background-color: #000;
 }
