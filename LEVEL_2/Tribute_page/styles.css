@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#tribute-head {
+    background-color: black;
+    height: 450px;
+    width: 100vw;
+    position: absolute;
+    top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: #fff;
+    grid-column: 1 / 3;
+}
+
+#tribute-body {
+    width: 100vw;
+    height: 100vh;
+}
+
+img {
+    border-radius: 50%;
+    height: 300px;
+    width: 280px;
+}
