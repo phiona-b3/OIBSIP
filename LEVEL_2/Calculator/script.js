@@ -5,7 +5,7 @@ const operationBtn = document.getElementsByClassName("operationBtn")
 const allClearBtn = document.querySelector(".clearBtn");
 const deleteBtn = document.querySelector(".deleteBtn");
 const equalSignBtn = document.querySelector(".equalSignBtn");
-
+const dotBtn = document.querySelector(".dotBtn");
 
 const appendNumber = (number) => {
     inputValue.value += number;
@@ -25,25 +25,42 @@ const deleteValue = (number) => {
     inputValue.value = number.toString().slice(0, -1);
 }
 
+let dotAppended = false;
+
+const appendDot = () => {
+    if (!dotAppended) {
+        inputValue.value += ".";
+        dotAppended = true;
+    }
+}
+
+
 const evaluateInputExpression = () => {
     const expression = inputValue.value;
     let output;
 
-    const operands = expression.split(/[+\-x÷]/).map(parseFloat);
+    const operands = expression.split(/[+\-x÷]/).map(part => {
+        if (part.includes("%")) {
+            return (parseFloat(part) / 100);
+        } else {
+            return parseFloat(part);
+        }
+    });
+
     const operator = expression.match(/[+\-x÷]/);
 
     switch (operator ? operator[0] : null) {
         case "+":
-            output = operands.reduce((a, b) => a + b);
+            output = operands.reduce((a, b) => parseFloat(a) + parseFloat(b), 0).toFixed(2);
             break;
         case "-":
-            output = operands[0] - operands[1];
+            output = (parseFloat(operands[0]) - parseFloat(operands[1])).toFixed(2);
             break;
         case "x":
             output = operands.reduce((a, b) => a * b);
             break;
         case "÷":
-            output = operands[0] / operands[1];
+            output = (parseFloat(operands[0]) / parseFloat(operands[1])).toFixed(2);
             break;
         default:
             output = "";
@@ -74,3 +91,5 @@ allClearBtn.addEventListener("click", () => clearDisplay())
 deleteBtn.addEventListener("click", () => deleteValue(inputValue.value))
 
 equalSignBtn.addEventListener("click", evaluateInputExpression);
+
+dotBtn.addEventListener("click", () => appendDot())
