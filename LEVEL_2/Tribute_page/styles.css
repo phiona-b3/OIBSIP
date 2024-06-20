@@ -7,8 +7,10 @@
 body {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
+/*Tribute head */
 #tribute-head {
     background-color: black;
     height: 450px;
@@ -24,7 +26,7 @@ body {
 
 #profile-image {
     border-radius: 50%;
-    height: 298px;
+    height: 300px;
     width: 290px;
     margin-top: -6px;
 }
@@ -104,6 +106,9 @@ body {
     left: 160px;
 }
 
+
+/*Tribute body*/
+
 .tribute-body {
     margin-top: 500px;
     display: grid;
@@ -113,7 +118,7 @@ body {
 
 .body-description {
     margin-left: 30px;
-    line-height: 24px;
+    line-height: 28px;
     font-size: 24px;
 }
 
@@ -123,7 +128,7 @@ body {
 
 .body-achievement {
     margin-right: 30px;
-    line-height: 24px;
+    line-height: 28px;
     font-size: 24px;
 }
 
@@ -155,4 +160,119 @@ body {
     width: 100vw;
     height: 100px;
     background-color: #000;
+}
+
+/*Media queries for mobile responsiveness */
+@media (max-width: 436px) {
+    #tribute-head {
+        background-color: #000;
+        width: 540px;
+        height: 680px;
+
+    }
+
+    .head-quote {
+        position: absolute;
+        top: 430px;
+        left: 50px
+    }
+    
+    .img-container { 
+        margin-left: 5px;
+    }
+    
+    .inner-img-container {
+        left: 5px;
+    }
+    
+    .text-overImage {
+        top: 350px;
+        left: 100px;
+        width: 100%;
+    }
+    
+    .text-paragraph1 {
+        left: 100px;
+        top: 430px;
+    }
+    
+    .text-paragraph2 {
+        left: 100px;
+        top: 470px;
+    }
+    
+    .tribute-body {
+        margin-top: 700px;
+        display: grid;
+        grid-template-columns: 450px;
+        width: 100%;
+    }
+    
+    .body-description {
+        width: 100%;
+    }
+    
+    .body-achievement {
+        width: 100%;
+        margin-left: 10px;
+    }
+    
+    .body-achievement > h3 {
+        margin-left: 10px;
+    }
+    
+    .tribute-footer {
+        width: 480px;
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+    
+    #body-quote {
+        font-style: italic;
+        width: 100%;
+    }
+    
+    .source {
+        margin-top: 40px;
+        text-align: right;
+        margin-right: 10px;
+        opacity: 0.3;
+    }
+    
+    .blank {
+        width: 540px;
+    }
+}
+
+@media (width: 768px) {
+    #tribute-head {
+        height: 630px;
+    }
+
+    .head-quote {
+        font-size: 20px;
+        position: absolute;
+        top: 400px;
+    }
+
+    .tribute-body {
+        grid-template-columns: repeat(2, 320px);
+        font-size: 16px;
+        gap: 5px;
+        margin-top: 680px;
+    }
+
+    .body-description {
+        font-size: 16px;
+    }
+
+    .body-achievement {
+        font-size: 16px;
+    }
+
+    .tribute-footer {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
 }
